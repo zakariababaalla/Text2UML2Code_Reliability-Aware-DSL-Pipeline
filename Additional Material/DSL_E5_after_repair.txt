@@ -1,0 +1,96 @@
+======================================================================
+QUALITY-AWARE UML DSL - VERSION 3.2
+======================================================================
+Generated: 2026-09-05T18:30:44.548590
+Reliability Score: 0.947
+Total Classes: 6
+Total Relations: 5
+Total Errors: 0
+Status: VALIDATED
+Corrections Applied: 16
+Attributes Added: 4
+Methods Added: 4
+
+CORRECTIONS APPLIED:
+----------------------------------------------------------------------
+  1. ✅ Attribute added: 'calibrationdate' added to class 'Sensor'
+  2. ✅ Method added: 'executetask()' added to class 'Robot'
+  3. ✅ Method added: 'calibratesensor()' added to class 'Technician'
+  4. ✅ Attribute added: 'duration' added to class 'Task'
+  5. ✅ Attribute added: 'status' added to class 'Task'
+  6. ✅ Method added: 'getRobot()' added to class 'Task'
+  7. ✅ Method added: 'getHistory()' added to class 'Task'
+  8. ✅ Attribute added: 'actuatorid' added to class 'Actuator'
+  9. Relation type corrected: Robot -> Laboratory (composition)
+  10. Relation type corrected: Sensor -> Robot (composition)
+  11. Source cardinality added: Robot 1..*
+  12. Target cardinality added: Laboratory 1..*
+  13. Source cardinality added: Sensor *
+  14. Target cardinality added: Robot *
+  15. Source cardinality added: Actuator *
+  16. Target cardinality added: Robot *
+
+CLASSES:
+----------------------------------------------------------------------
+
+Class Laboratory:
+  Attributes: name, location, laboratoryid
+  Methods: managerobots, managetechnicians
+  Quality Metrics:
+    Confidence: 0.930
+    Syntactic: 0.950
+    Semantic: 0.960
+    Reliability: 0.947
+
+Class Sensor:
+  Attributes: type, sensorid, measurementvalue, calibrationdate
+  Methods: calibrate, getmeasurement
+  Quality Metrics:
+    Confidence: 0.930
+    Syntactic: 0.950
+    Semantic: 0.960
+    Reliability: 0.947
+
+Class Robot:
+  Attributes: operatingstatus, model, robotid
+  Methods: reportstatus, move, collectsensordata, stop, executetask
+  Quality Metrics:
+    Confidence: 0.930
+    Syntactic: 0.950
+    Semantic: 0.960
+    Reliability: 0.947
+
+Class Technician:
+  Attributes: name, email, technicianid, specialization
+  Methods: calibratesensor, replaceactuator, configurerobot
+  Quality Metrics:
+    Confidence: 0.930
+    Syntactic: 0.950
+    Semantic: 0.960
+    Reliability: 0.947
+
+Class Task:
+  Attributes: duration, status
+  Methods: gitRobot, getHistory
+  Quality Metrics:
+    Confidence: 0.930
+    Syntactic: 0.950
+    Semantic: 0.960
+    Reliability: 0.947
+
+Class Actuator:
+  Attributes: name, status, powerlevel, actuatorid
+  Methods: getpowerlevel, activate, deactivate
+  Quality Metrics:
+    Confidence: 0.930
+    Syntactic: 0.950
+    Semantic: 0.960
+    Reliability: 0.947
+
+RELATIONS:
+----------------------------------------------------------------------
+  Robot composition Laboratory [1..*] -> [1..*] (confidence: 0.88)
+  Sensor composition Robot [*] -> [*] (confidence: 0.88)
+  Actuator composition Robot [*] -> [*] (confidence: 0.88)
+  Robot association Task (confidence: 0.88)  
+  Robot association Technician (confidence: 0.88)

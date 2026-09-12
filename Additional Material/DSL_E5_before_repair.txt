@@ -1,0 +1,77 @@
+======================================================================
+QUALITY-AWARE UML DSL - VERSION 3.2
+======================================================================
+Generated: 2026-09-05T18:27:41.060797
+Reliability Score: 0.836
+Total Classes: 6
+Total Relations: 5
+Total Errors: 0
+Status: RAW (BERT)
+Corrections Applied: 0
+Attributes Added: 0
+Methods Added: 0
+
+CLASSES:
+----------------------------------------------------------------------
+
+Class Laboratory:
+  Attributes: name, location, laboratoryid
+  Methods: managerobots, managetechnicians
+  Quality Metrics:
+    Confidence: 0.820
+    Syntactic: 0.850
+    Semantic: 0.840
+    Reliability: 0.836
+
+Class Sensor:
+  Attributes: type, sensorid, measurementvalue
+  Methods: calibrate, getmeasurement
+  Quality Metrics:
+    Confidence: 0.820
+    Syntactic: 0.850
+    Semantic: 0.840
+    Reliability: 0.836
+
+Class Robot:
+  Attributes: operatingstatus, model, robotid
+  Methods: reportstatus, move, collectsensordata, stop
+  Quality Metrics:
+    Confidence: 0.820
+    Syntactic: 0.850
+    Semantic: 0.840
+    Reliability: 0.836
+
+Class Technician:
+  Attributes: name, email, technicianid, specialization
+  Methods: replaceactuator, configurerobot
+  Quality Metrics:
+    Confidence: 0.820
+    Syntactic: 0.850
+    Semantic: 0.840
+    Reliability: 0.836
+
+Class Task:
+  Attributes: (none)
+  Methods: (none)
+  Quality Metrics:
+    Confidence: 0.820
+    Syntactic: 0.850
+    Semantic: 0.840
+    Reliability: 0.836
+
+Class Actuator:
+  Attributes: name, status, powerlevel
+  Methods: getpowerlevel, activate, deactivate
+  Quality Metrics:
+    Confidence: 0.820
+    Syntactic: 0.850
+    Semantic: 0.840
+    Reliability: 0.836
+
+RELATIONS:
+----------------------------------------------------------------------
+  Robot aggregation Laboratory (confidence: 0.80)
+  Sensor association Robot (confidence: 0.80)
+  Actuator composition Robot (confidence: 0.80)
+  Robot association Technician (confidence: 0.80)
+  Robot association Task (confidence: 0.80)
